@@ -1,0 +1,24 @@
+<p>create-tour works!</p>
+
+<div class="container">
+  <form  (ngSubmit)="create()" [formGroup]="formCreate">
+    <br>
+
+    nhập name
+    <br>
+    <input formControlName="nameTour">
+    <p *ngIf="!formCreate?.get('nameTour')?.valid" style="color: red">* không được nhập dưới 6 ký tự</p>
+    <br>
+    nhập price
+    <br>
+    <input formControlName="priceTour">
+    <br>
+    <br>
+    nhập descriptionTour
+    <br>
+    <input formControlName="descriptionTour">
+    <br>
+    <button type="submit" class="btn btn-success">Save</button>
+  </form>
+  <button [routerLink]="['/tour/list-tour']" > Back to home</button>
+</div>

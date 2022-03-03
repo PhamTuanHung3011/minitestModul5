@@ -1,0 +1,32 @@
+<p>edit-tour works!</p>
+
+
+<!--<h4>Tour du lich {{tour.nameTour}}</h4>-->
+<!--<p>Gia: {{tour.priceTour}}</p>-->
+<!--<p>Gioi thieu: {{tour.descriptionTour}}</p>-->
+<!--<button [routerLink]="['/tour/list-tour']" > Back to home</button>-->
+
+
+<div class="container">
+  <form >
+     id Tour
+    <br>
+    <input [(ngModel)]="tour.id" name="id" readonly>
+    <br>
+    nhập name
+    <br>
+    <input [(ngModel)]="tour.nameTour" name="nameTour" >
+    <br>
+    nhập price
+    <br>
+    <input type="number" [(ngModel)]="tour.priceTour" name="priceTour">
+    <br>
+    descriptionTour
+    <br>
+    <input [(ngModel)]="tour.descriptionTour" name="descriptionTour"><br>
+
+    <button type="submit" class="btn btn-success" (click)="edit()">Save</button>
+  </form>
+
+  <button [routerLink]="['/tour/list-tour']" > Back to home</button>
+</div>
